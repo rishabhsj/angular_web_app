@@ -1,0 +1,26 @@
+npm install -g @angular/cli   //install angular cli
+
+
+ng --version //check cli version
+
+header component ------------> View 
+Typescript (class ...)           HTML <></>
+
+
+Every component will have its own VIEW(UI) and Data
+
+
+<app-root></app-root>    is a custom tag and represents component in Angular
+
+
+
+
+
+////
+ng serve -> to run the file
+
+ng new<>
+
+ng generate component <name>[options]
+Eg:   ng generate component employeelist
+

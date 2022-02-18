@@ -1,0 +1,26 @@
+// https://docs.angularjs.org/tutorial
+
+SPA - All updates on the page are done dynamically without reloading the page
+
+Client-side framework application run within browser and they generate UI
+
+Angular/react/vue --------> update the DOM (by JS)---------> Rendered on the Web page
+
+
+What is angular?
+It is a client-side framework used for developing Web application that run within the broswer
+
+    Angular applications are developed in TypeScript language
+
+    Angular is developed by the Google.
+
+    web applications are built on MVC(Model-view-controller) architecture.
+
+////
+// to run : tsc -t ES5 .\testemployees.ts
+
+
+tsconfig.json  -> configiration for typescript 
+"tsc --init"
+
+// to start .ts files in watch mode and create .js file automatically:   "tsc --watch"
