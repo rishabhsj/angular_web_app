@@ -1,0 +1,40 @@
+<p>twowaydatabinding works!</p>
+<h1>Template Reference Variable</h1>
+Enter FirstName:
+<input
+  type="text"
+  placeholder="enter firstname"
+  [value]="firstname"
+  #x
+  (change)="updateFirstName(x.value)"
+/>
+
+<h6>Value in textbox - {{ firstname }}</h6>
+<!-- <button (click)="updateFirstName(x.value)">Update FirstName</button> -->
+
+<p>
+  placeholder - {{ x.placeholder }} value - {{ x.value }} size - {{ x.size }} x
+  - {{ x }}
+</p>
+
+<h1>NgModel</h1>
+<!-- ngModel is a combination of property + event binding -->
+<input type="text" placeholder="firstname" [(ngModel)]="firstname" />
+
+<hr />
+<select #myColor>
+  <option *ngFor="let color of colors">
+    {{ color }}
+  </option>
+</select>
+
+<p [style.color]="myColor.value">Hello World!</p>
+
+<!-- <select [(ngModel)]="mySelectedColor">
+  <option *ngFor="let color of colors">
+    {{ color }}
+  </option>
+</select>
+
+<p [style.color]="mySelectedColor.value">Hello World!</p> -->
+

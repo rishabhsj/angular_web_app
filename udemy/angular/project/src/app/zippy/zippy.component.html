@@ -1,0 +1,26 @@
+<div class="container text-center">
+    <div class="align-middle"  (click)="toggleDetails()" [ngStyle]="{
+        'width': '80%',
+        'height': '50px',
+        'backgroundColor': '#ccc',
+        'margin-left' : '50px',
+        'padding-top':'15px'
+    }">
+        <span [ngStyle]="{'margin-right' : '50px'}">{{title}}</span>
+        <span class="glyphicon"
+        [ngClass]="{
+          'glyphicon-chevron-down'  : isHidden,
+          'glyphicon-chevron-up' : !isHidden
+        }"
+        ></span>
+        
+    </div>
+    <div  [hidden]="isHidden==true" [ngStyle]="{
+        'width': '80%',
+        'height': '50px',
+        'border': '1px solid #ccc',
+        'margin-left' : '50px',
+        'padding-top':'15px'
+    }"><ng-content></ng-content></div>
+
+</div>

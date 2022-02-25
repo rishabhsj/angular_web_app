@@ -1,0 +1,70 @@
+<p>employeelist works!</p>
+<!-- 
+<h1>First Employee Details</h1>
+<ul>
+  <li>Employee Id - {{ employees[0].empId }}</li>
+  <li>Employee Name - {{ employees[0].name }}</li>
+  <li>Employee Salary - {{ employees[0].salary }}</li>
+  <li>Employee Photo - {{ employees[0].photo }}</li>
+  <li>Employee Status - {{ employees[0].status }}</li>
+</ul>
+<hr />
+<h1>Second Employee Details</h1>
+<ul>
+  <li>Employee Id - {{ employees[1].empId }}</li>
+  <li>Employee Name - {{ employees[1].name }}</li>
+  <li>Employee Salary - {{ employees[1].salary }}</li>
+  <li>Employee Photo - {{ employees[1].photo }}</li>
+  <li>Employee Status - {{ employees[1].status }}</li>
+</ul>
+-->
+<hr />
+<h1>Iterating over Array</h1>
+<!-- single unordered list with mulitple items-->
+<ul>
+  <li *ngFor="let x of employees">
+    {{ x.empId }} - {{ x.name }} - {{ x.salary }}
+  </li>
+</ul>
+
+<!-- table with multiple rows and columns-->
+<!-- with interpolation-->
+<h1>{{ title }}</h1>
+<!-- without interpolation-->
+<h1 [innerHTML]="title"></h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Employee ID</th>
+      <th>Employee Name</th>
+      <th>Employee Salary</th>
+      <th>
+        Employee Photo
+        <button>Show-Hide Photo</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.empId }}</td>
+      <td>{{ emp.name | uppercase }}</td>
+      <td>{{ emp.salary | currency: "USD":"code" }}</td>
+      <td><img [src]="emp.photo" [width]="width" [height]="height" /></td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          [disabled]="flag"
+          (click)="handlerClick()"
+        >
+          Update
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+FirstName - <input type="text" [value]="employees[2].name" />
+<br />
+<br />
+
+<!-- DropDown with empid in it from employees-->

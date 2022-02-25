@@ -1,0 +1,18 @@
+<input type="text" (keypress)="updateFirstName(x.value)" placeholder="First Name" [value]="firstname" #x>
+<h6>Value in first name: {{firstname}}</h6>
+
+<p>placeholder:{{x.placeholder}}</p>
+<p>value:{{x.value}}</p>
+
+<select [(ngModel)]="selectedcolor">
+    <option *ngFor="let color of colors"> {{color}}</option>
+</select>
+
+<p [style.color]="selectedcolor">COLORS</p>
+
+<p>ngModel</p>
+
+<input type="text" [(ngModel)]="firstname" placeholder="First Name">
+
+
+

@@ -1,0 +1,5 @@
+<span [class]="'glyphicon glyphicon-heart'" 
+[ngStyle]="{
+    'color' : isLiked? 'deeppink':'#ccc'
+}" (click)="likeClicked()"
+>{{counter}}</span>

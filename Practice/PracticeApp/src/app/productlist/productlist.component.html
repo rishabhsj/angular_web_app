@@ -1,0 +1,13 @@
+<div class="container">
+<div class="card-group" style="margin-top:10%; margin-bottom:10%">
+<div class="card card-block d-flex" *ngFor="let product of products">
+    <div class="card-header bg-dark">
+        <h5 class="card-title text-white text-center">{{ product.name }}</h5></div>
+    <img class="card-img-top img-fluid" src="assets/img/product-img.jpg" alt="Card image">
+    <div class="card-body align-items-center d-flex justify-content-center bg-gradient bg-light">
+    <div><p class="card-text text-center">{{ product.description }}</p></div>
+</div>
+    <div class="card-footer bg-gradient text-light bg-dark"><h6 class=" card-text text-end">{{ product.price | currency:'GBP' }}</h6></div>
+      </div>
+    </div>
+    </div>
